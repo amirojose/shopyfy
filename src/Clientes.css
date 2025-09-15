@@ -1,0 +1,68 @@
+.clientes-contenedor {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* permite que se acomode en móviles */
+  margin-top: 20px;
+}
+
+.clientes-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  width: 100%;
+  background-color: #fff;
+  flex-wrap: wrap;
+}
+
+.clientes-izquierda {
+  flex: 1;
+  padding-right: 20px;
+  min-width: 200px;
+}
+
+.clientes-texto {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.clientes-botones {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.boton-agregar,
+.boton-importar {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.boton-agregar {
+  background-color: #5c6ac4;
+  color: white;
+}
+
+.boton-agregar:hover {
+  background-color: #434fa1;
+}
+
+.boton-importar {
+  background-color: #ddd;
+  color: #333;
+}
+
+.boton-importar:hover {
+  background-color: #bbb;
+}
+
+.clientes-derecha img.clientes-imagen {
+  width: 150px;
+  height: auto;
+}

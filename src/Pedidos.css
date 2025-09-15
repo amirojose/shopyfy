@@ -1,0 +1,41 @@
+.pedidos-contenedor {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap; /* que se acomode en móviles */
+}
+
+.pedido-card {
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%; /* ancho completo en móviles */
+  margin: 10px;
+}
+
+.pedido-imagen {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.pedido-texto {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+.pedido-boton {
+  padding: 10px 20px;
+  background-color: #5c6ac4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pedido-boton:hover {
+  background-color: #434fa1;
+}

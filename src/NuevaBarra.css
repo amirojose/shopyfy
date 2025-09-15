@@ -1,0 +1,48 @@
+.nueva-barra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1a1a1a;
+  color: white;
+  padding: 15px 30px;
+  flex-wrap: wrap; /* permitir que los elementos bajen en móviles */
+}
+
+.nueva-barra .logo h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.nueva-barra .menu {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nueva-barra .menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nueva-barra .menu a:hover {
+  text-decoration: underline;
+}
+
+.nueva-barra .usuario {
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nueva-barra {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nueva-barra .menu {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

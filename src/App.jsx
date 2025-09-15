@@ -11,7 +11,6 @@ import Contenido from "./Contenido";
 import Informes from "./Informes";
 import Login from "./Login";
 import Seccion from "./Seccion";
-import SeccionUltima from "./SeccionUltima.jsx";
 
 function App() {
   // Estado global del login
@@ -36,7 +35,7 @@ function App() {
           <Barra />
           <Login setUsuarioLogueado={setUsuarioLogueado} />
           <Seccion />
-          <SeccionUltima />
+          
         </>
       ) : (
         // 👇 Después de iniciar sesión

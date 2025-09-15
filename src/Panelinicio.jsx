@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./PanelInicio.css";
+import "./Panelinicio.css";
 import logotarjetas from "./assets/logotarjetas.png";
 import bandera from "./assets/bandera.png";
 import silla from "./assets/silla.png";

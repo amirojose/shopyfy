@@ -8,7 +8,7 @@ function Barra() {
   const [solucionesAbierto, setSolucionesAbierto] = useState(false);
 
   return (
-    <div className="barra"> {/* Contenedor principal de la barra */}
+    <div className="barra"> 
 
       {/* Lado izquierdo de la barra */}
       <div className="barra-izquierda">

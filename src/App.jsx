@@ -11,7 +11,7 @@ import Contenido from "./Contenido";
 import Informes from "./Informes";
 import Login from "./Login";
 import Seccion from "./Seccion";
-import SeccionUltima from "./SeccionUltima";
+import SeccionUltima from "./SeccionUltima"
 
 function App() {
   // Estado global del login

@@ -11,7 +11,7 @@ function Productos() {
 
   // Cargar productos desde PHP al iniciar
   useEffect(() => {
-    fetch("http://localhost/productosshopyfy/productos.php")
+    fetch("https://mipaginashopy.ct.ws/Productos.php")
       .then((res) => res.json())
       .then((data) => {
         if (data.success) {

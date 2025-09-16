@@ -13,7 +13,7 @@ function Login({ setUsuarioLogueado }) { // 👈 Recibimos la función desde App
     e.preventDefault();
 
     try {
-      const respuesta = await fetch("http://localhost/shopyfy/login.php", {
+      const respuesta = await fetch("https://mipaginashopy.ct.ws/login.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),

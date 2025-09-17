@@ -18,7 +18,7 @@ function App() {
   // Revisar localStorage al montar
   useEffect(() => {
     const guardado = localStorage.getItem("usuarioLogueado");
-    setUsuarioLogueado(guardado === "true"); // convertir string a boolean
+    setUsuarioLogueado(guardado === "true"); 
   }, []);
 
   return (

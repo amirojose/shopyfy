@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom"; // para movernos entre páginas
+import { useNavigate } from "react-router-dom"; //aqui lo use para movernos entre páginas
 import "./Login.css";
 
 function Login({ setUsuarioLogueado }) { // esto lo recibimos desde App.jsx

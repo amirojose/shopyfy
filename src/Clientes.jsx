@@ -1,6 +1,6 @@
 import React from "react";
-import "./Clientes.css"; // archivo de estilos
-import clientesImg from "./assets/clientes.png"; // asegúrate de tener la imagen en src/assets/
+import "./Clientes.css"; 
+import clientesImg from "./assets/clientes.png"; 
 
 function Clientes() {
   return (

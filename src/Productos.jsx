@@ -9,7 +9,7 @@ function Productos() {
   const [imagenes, setImagenes] = useState([]);
   const [productos, setProductos] = useState([]);
 
-  // Cargamos los productos desde PHP al iniciar
+  // Cargamos productos desde PHP al iniciar
   useEffect(() => {
     fetch("http://localhost/productosshopyfy/productos.php")
       .then((res) => res.json())

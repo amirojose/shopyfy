@@ -30,7 +30,7 @@ function App() {
   return (
     <Router>
       {!usuarioLogueado ? (
-        // 👇 Antes de iniciar sesión
+        //  Antes de iniciar sesión
         <>
           <Barra />
           <Login setUsuarioLogueado={setUsuarioLogueado} />
@@ -38,7 +38,7 @@ function App() {
           
         </>
       ) : (
-        // 👇 Después de iniciar sesión
+        //  Después de iniciar sesión
         <Routes>
           <Route
             path="/inicio"
@@ -51,7 +51,7 @@ function App() {
           <Route path="/descuentos" element={<Descuentos />} />
           <Route path="/contenido" element={<Contenido />} />
           <Route path="/informes" element={<Informes />} />
-          {/* 👇 Si entras a cualquier ruta sin iniciar sesión */}
+          {/*  Si entras a cualquier ruta sin iniciar sesión */}
           <Route path="*" element={<Inicio setUsuarioLogueado={setUsuarioLogueado} />} />
         </Routes>
       )}

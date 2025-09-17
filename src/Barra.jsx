@@ -1,18 +1,17 @@
-// Importamos herramientas de React y recursos
-import { useState } from "react"; // Hook para manejar estados (abrir/cerrar menú)
-import "./Barra.css"; // Estilos de este componente
-import logo from "./assets/logo.png"; // Imagen del logo
+import { useState } from "react"; //aca lo usamos para (abrir/cerrar menú)
+import "./Barra.css"; // 
+import logo from "./assets/logo.png"; 
 
 function Barra() {
-  // Estado para saber si el menú "Soluciones" está abierto o cerrado
+  // el menu comienza en falso, cerrado
   const [solucionesAbierto, setSolucionesAbierto] = useState(false);
 
   return (
     <div className="barra"> 
 
-      {/* Lado izquierdo de la barra */}
+      
       <div className="barra-izquierda">
-        {/* Logo de la tienda */}
+        
         <img src={logo} alt="Shopyfy" className="logo" />
 
         {/* Menú desplegable "Soluciones" */}
@@ -22,19 +21,19 @@ function Barra() {
             href="#!"
             className="menu-boton"
             onClick={(e) => {
-              e.preventDefault(); // Evita que la página recargue
-              setSolucionesAbierto(!solucionesAbierto); // Cambia el estado
+              e.preventDefault(); 
+              setSolucionesAbierto(!solucionesAbierto);
             }}
           >
-            Soluciones {solucionesAbierto ? "▲" : "▼"} {/* Flecha arriba o abajo */}
+            Soluciones {solucionesAbierto ? "▲" : "▼"} 
           </a>
 
-          {/* Si el estado es true, muestra el menú */}
+          {/* menu desplegable de soluciones */}
           {solucionesAbierto && (
             <div className="desplegable-contenido">
               {/* Columna 1 */}
               <div className="columna">
-                <h4>Comienza 🚀</h4>
+                <h4>Comienza </h4>
                 <p><b>Comienza tu negocio. </b><br /><span>Desarrolla tu marca</span></p>
                 <p><b>Crea tu sitio web. </b><br /> Editor de tienda online</p>
                 <p><b>Personaliza tu tienda. </b><br />Temas para tiendas</p>
@@ -45,7 +44,7 @@ function Barra() {
 
               {/* Columna 2 */}
               <div className="columna">
-                <h4>Vende 💰</h4>
+                <h4>Vende </h4>
                 <p><b>Vende tus productos.</b> <br />Vende online o en persona</p>
                 <p><b>Vende online.</b> <br /> Haz crecer tu negocio online</p>
                 <p><b>Vende en distintos canales.</b> <br />Llega a millones de compradores y <br />aumenta tus ventas</p>
@@ -67,7 +66,7 @@ function Barra() {
 
               {/* Columna 4 */}
               <div className="columna">
-                <h4>Gestiona ⚙️</h4>
+                <h4>Gestiona </h4>
                 <p><b>Gestiona tu negocio.</b><br />Sigue las ventas, los pedidos, los <br />informes y estadísticas</p>
                 <p><b>Mide tu rendimiento.</b><br />Informes y estadísticas</p>
                 <p><b>Gestiona tus existencias y los <br /> pedidos</b><br />Gestión de inventario y pedidos</p>
@@ -91,4 +90,4 @@ function Barra() {
   );
 }
 
-export default Barra; // Exporta el componente para usarlo en App.jsx
+export default Barra; 

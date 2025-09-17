@@ -1,5 +1,5 @@
 import React from "react";
-import "./NuevaBarra.css"; // 👈 archivo de estilos aparte
+import "./NuevaBarra.css";
 
 function NuevaBarra() {
   return (

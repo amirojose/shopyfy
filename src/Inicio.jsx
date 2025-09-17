@@ -7,7 +7,7 @@ import PanelInicio from "./Panelinicio";
 function Inicio({ setUsuarioLogueado }) {
   const [mostrarMenu, setMostrarMenu] = useState(false);
 
-  // Función para alternar el menú "Mi tienda"
+  
   const toggleMenu = () => setMostrarMenu(!mostrarMenu);
 
   return (

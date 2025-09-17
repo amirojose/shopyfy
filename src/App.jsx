@@ -13,37 +13,25 @@ import Login from "./Login";
 import Seccion from "./Seccion";
 
 function App() {
-  // Estado global del login
   const [usuarioLogueado, setUsuarioLogueado] = useState(false);
 
   // Revisar localStorage al montar
-   useEffect(() => {
-  const guardado = localStorage.getItem("usuarioLogueado");
-  setUsuarioLogueado(guardado === "true");
-}, []);
-
-useEffect(() => {
-  localStorage.setItem("usuarioLogueado", usuarioLogueado ? "true" : "false");
-}, [usuarioLogueado]);
-
+  useEffect(() => {
+    const guardado = localStorage.getItem("usuarioLogueado");
+    setUsuarioLogueado(guardado === "true"); // convertir string a boolean
+  }, []);
 
   return (
     <Router>
       {!usuarioLogueado ? (
-        //  Antes de iniciar sesión
         <>
           <Barra />
           <Login setUsuarioLogueado={setUsuarioLogueado} />
           <Seccion />
-          
         </>
       ) : (
-        //  Después de iniciar sesión
         <Routes>
-          <Route
-            path="/inicio"
-            element={<Inicio setUsuarioLogueado={setUsuarioLogueado} />}
-          />
+          <Route path="/inicio" element={<Inicio setUsuarioLogueado={setUsuarioLogueado} />} />
           <Route path="/productos" element={<Productos />} />
           <Route path="/pedidos" element={<Pedidos />} />
           <Route path="/clientes" element={<Clientes />} />
@@ -51,7 +39,6 @@ useEffect(() => {
           <Route path="/descuentos" element={<Descuentos />} />
           <Route path="/contenido" element={<Contenido />} />
           <Route path="/informes" element={<Informes />} />
-          {/*  Si entras a cualquier ruta sin iniciar sesión */}
           <Route path="*" element={<Inicio setUsuarioLogueado={setUsuarioLogueado} />} />
         </Routes>
       )}
@@ -60,4 +47,3 @@ useEffect(() => {
 }
 
 export default App;
-

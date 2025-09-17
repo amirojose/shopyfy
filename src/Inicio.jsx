@@ -7,7 +7,8 @@ import PanelInicio from "./Panelinicio";
 function Inicio({ setUsuarioLogueado }) {
   const [mostrarMenu, setMostrarMenu] = useState(false);
 
-  const toggleMenu = () => setMostrarMenu(!mostrarMenu); {/* creo una funcion mas limpia para cambiar mi menu */}
+  // Función para alternar el menú "Mi tienda"
+  const toggleMenu = () => setMostrarMenu(!mostrarMenu);
 
   return (
     <div className="contenedor-inicio">
@@ -25,7 +26,7 @@ function Inicio({ setUsuarioLogueado }) {
           <span>🔔</span>
           <span>⚙️</span>
 
-          {/*  Menú Mi tienda  */}
+          {/* Menú Mi tienda */}
           <div className="mi-tienda-menu">
             <button className="mi-tienda-boton" onClick={toggleMenu}>
               <span className="mi">Mt</span> Mi tienda
@@ -35,8 +36,8 @@ function Inicio({ setUsuarioLogueado }) {
               <div className="cerrar-menu">
                 <button
                   onClick={() => {
-                    setUsuarioLogueado(false);
-                    localStorage.setItem("usuarioLogueado", "false"); // cerrar sesión
+                    setUsuarioLogueado(false);               // Actualiza estado global
+                    localStorage.removeItem("usuarioLogueado"); // Borra la sesión guardada
                   }}
                 >
                   Cerrar sesión
@@ -47,9 +48,9 @@ function Inicio({ setUsuarioLogueado }) {
         </div>
       </header>
 
-      {/*  Contenido principal  */}
+      {/* Contenido principal */}
       <div className="cuerpo-inicio">
-        {/*  Menú lateral  */}
+        {/* Menú lateral */}
         <aside className="menu-lateral">
           <ul>
             <li><NavLink to="/inicio">Inicio</NavLink></li>
@@ -64,7 +65,7 @@ function Inicio({ setUsuarioLogueado }) {
           </ul>
         </aside>
 
-        {/*  Área central  */}
+        {/* Área central */}
         <main className="contenido-principal">
           <h1 className="bienvenida">¡Te damos la bienvenida a Shopyfy! 🎉</h1>
           <PanelInicio />

@@ -1,13 +1,13 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom"; //aqui lo use para movernos entre páginas
+import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
-function Login({ setUsuarioLogueado }) { // esto lo recibimos desde App.jsx
+function Login({ setUsuarioLogueado }) {
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [mensaje, setMensaje] = useState("");
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const manejarSubmit = async (e) => {
     e.preventDefault();
@@ -23,11 +23,10 @@ function Login({ setUsuarioLogueado }) { // esto lo recibimos desde App.jsx
       setMensaje(datos.message);
 
       if (datos.success) {
-        
-        setUsuarioLogueado(true);
-
-      localStorage.setItem("usuarioLogueado", "true");
-        navigate("/inicio");
+        // Guardamos en localStorage primero
+        localStorage.setItem("usuarioLogueado", "true");
+        setUsuarioLogueado(true); // actualizamos estado global
+        navigate("/inicio"); // redirigimos
       }
     } catch (error) {
       setMensaje("⚠️ Error de conexión con el servidor");
@@ -41,50 +40,36 @@ function Login({ setUsuarioLogueado }) { // esto lo recibimos desde App.jsx
         <p className="subtitulo">Continuar a Shopyfy</p>
 
         {!mostrarFormulario ? (
-          <button 
-            className="boton-login"
-            onClick={() => setMostrarFormulario(true)}
-          >
+          <button className="boton-login" onClick={() => setMostrarFormulario(true)}>
             Inicia sesión en tu cuenta de Shopyfy
           </button>
         ) : (
           <form className="formulario-login" onSubmit={manejarSubmit}>
-            <input 
-              type="email" 
-              placeholder="Correo electrónico" 
+            <input
+              type="email"
+              placeholder="Correo electrónico"
               className="input-login"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
-            <input 
-              type="password" 
-              placeholder="Contraseña" 
+            <input
+              type="password"
+              placeholder="Contraseña"
               className="input-login"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
             />
-            <button type="submit" className="boton-login">
-              Entrar
-            </button>
+            <button type="submit" className="boton-login">Entrar</button>
           </form>
         )}
 
         {mensaje && <p style={{ marginTop: "10px" }}>{mensaje}</p>}
-
-        <p className="registro">
-          ¿Eres nuevo en Shopyfy? <a href="#">Crear cuenta →</a>
-        </p>
-
-        <div className="enlaces-pie">
-          <a href="#">Ayuda</a>
-          <a href="#">Privacidad</a>
-          <a href="#">Términos</a>
-        </div>
       </div>
     </div>
   );
 }
 
 export default Login;
+

@@ -1,4 +1,4 @@
-/* ================= Barra principal ================= */
+
 .barra {
   display: flex;
   justify-content: space-between;
@@ -60,12 +60,12 @@
   background: #f5f5f5;
 }
 
-/* ================= Menú desplegable fullscreen ================= */
+
 .menu-desplegable {
   position: relative;
 }
 
-/* Ahora menu-boton se ve como los otros enlaces */
+
 .menu-boton {
   background: none;
   border: none;
@@ -124,7 +124,7 @@
   text-decoration: underline;
 }
 
-/* ================= Responsive ================= */
+
 @media (max-width: 1024px) {
   .desplegable-contenido {
     flex-direction: column;

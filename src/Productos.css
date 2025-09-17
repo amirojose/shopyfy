@@ -5,7 +5,7 @@
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  padding-top: 80px; /* deja espacio debajo de la barra */
+  padding-top: 80px; 
 }
 
 .productos-contenedor h2 {

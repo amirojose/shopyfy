@@ -5,7 +5,7 @@
   background: #1a1a1a;
   color: white;
   padding: 15px 30px;
-  flex-wrap: wrap; /* permitir que los elementos bajen en móviles */
+  flex-wrap: wrap; 
 }
 
 .nueva-barra .logo h2 {

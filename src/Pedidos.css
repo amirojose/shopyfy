@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   margin-top: 20px;
-  flex-wrap: wrap; /* que se acomode en móviles */
+  flex-wrap: wrap;
 }
 
 .pedido-card {
@@ -11,7 +11,7 @@
   padding: 20px;
   border-radius: 10px;
   max-width: 400px;
-  width: 100%; /* ancho completo en móviles */
+  width: 100%; 
   margin: 10px;
 }
 

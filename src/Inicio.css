@@ -87,7 +87,7 @@
 .contenido-principal {
   flex: 1;
   padding: 20px;
-  min-width: 0; /* importante para evitar overflow */
+  min-width: 0; 
 }
 
 .mi-tienda-menu {
@@ -146,7 +146,7 @@
   padding-left: 20px;
 }
 
-/* ===== Responsive ===== */
+
 @media (max-width: 768px) {
   .cuerpo-inicio {
     flex-direction: column;

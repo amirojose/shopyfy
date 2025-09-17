@@ -1,7 +1,7 @@
 .clientes-contenedor {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* permite que se acomode en móviles */
+  flex-wrap: wrap; 
   margin-top: 20px;
 }
 

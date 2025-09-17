@@ -35,7 +35,8 @@ function Inicio({ setUsuarioLogueado }) {
               <div className="cerrar-menu">
                 <button
                   onClick={() => {
-                    setUsuarioLogueado(false); // cerrar sesión
+                    setUsuarioLogueado(false);
+                    localStorage.setItem("usuarioLogueado", "false"); // cerrar sesión
                   }}
                 >
                   Cerrar sesión

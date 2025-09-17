@@ -17,15 +17,15 @@ function App() {
   const [usuarioLogueado, setUsuarioLogueado] = useState(false);
 
   // Revisar localStorage al montar
-    useEffect(() => {
-      const guardado = localStorage.getItem("usuarioLogueado");
-      setUsuarioLogueado(guardado === "true");
-    }, []);
+   useEffect(() => {
+  const guardado = localStorage.getItem("usuarioLogueado");
+  setUsuarioLogueado(guardado === "true");
+}, []);
 
-  // Mantener sincronizado con localStorage
-  useEffect(() => {
-    localStorage.setItem("usuarioLogueado", usuarioLogueado);
-  }, [usuarioLogueado]);
+useEffect(() => {
+  localStorage.setItem("usuarioLogueado", usuarioLogueado ? "true" : "false");
+}, [usuarioLogueado]);
+
 
   return (
     <Router>

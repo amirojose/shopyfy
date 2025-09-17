@@ -26,7 +26,7 @@ function Login({ setUsuarioLogueado }) { // esto lo recibimos desde App.jsx
         
         setUsuarioLogueado(true);
 
-      
+      localStorage.setItem("usuarioLogueado", "true");
         navigate("/inicio");
       }
     } catch (error) {

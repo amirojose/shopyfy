@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom"; // 👈 para movernos entre páginas
+import { useNavigate } from "react-router-dom"; // para movernos entre páginas
 import "./Login.css";
 
-function Login({ setUsuarioLogueado }) { // 👈 Recibimos la función desde App.jsx
+function Login({ setUsuarioLogueado }) { // esto lo recibimos desde App.jsx
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -13,7 +13,7 @@ function Login({ setUsuarioLogueado }) { // 👈 Recibimos la función desde App
     e.preventDefault();
 
     try {
-      const respuesta = await fetch("https://mipaginashopy.ct.ws/login.php", {
+      const respuesta = await fetch("http://localhost/shopyfy/login.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -23,10 +23,10 @@ function Login({ setUsuarioLogueado }) { // 👈 Recibimos la función desde App
       setMensaje(datos.message);
 
       if (datos.success) {
-        // 👇 Actualizamos el estado global de usuario logueado
+        
         setUsuarioLogueado(true);
 
-        // 👇 Redirigimos a la página de inicio
+      
         navigate("/inicio");
       }
     } catch (error) {

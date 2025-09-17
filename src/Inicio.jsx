@@ -11,7 +11,7 @@ function Inicio({ setUsuarioLogueado }) {
 
   return (
     <div className="contenedor-inicio">
-      {/* ===== Barra superior ===== */}
+      {/* Barra superior */}
       <header className="barra-superior">
         <div className="header-left">
           <img src={logo} alt="Shopify" className="logo-header" />
@@ -25,7 +25,7 @@ function Inicio({ setUsuarioLogueado }) {
           <span>🔔</span>
           <span>⚙️</span>
 
-          {/* ===== Menú Mi tienda ===== */}
+          {/*  Menú Mi tienda  */}
           <div className="mi-tienda-menu">
             <button className="mi-tienda-boton" onClick={toggleMenu}>
               <span className="mi">Mt</span> Mi tienda
@@ -35,7 +35,7 @@ function Inicio({ setUsuarioLogueado }) {
               <div className="cerrar-menu">
                 <button
                   onClick={() => {
-                    setUsuarioLogueado(false); // 👈 cerrar sesión
+                    setUsuarioLogueado(false); // cerrar sesión
                   }}
                 >
                   Cerrar sesión
@@ -46,9 +46,9 @@ function Inicio({ setUsuarioLogueado }) {
         </div>
       </header>
 
-      {/* ===== Contenido principal ===== */}
+      {/*  Contenido principal  */}
       <div className="cuerpo-inicio">
-        {/* ===== Menú lateral ===== */}
+        {/*  Menú lateral  */}
         <aside className="menu-lateral">
           <ul>
             <li><NavLink to="/inicio">Inicio</NavLink></li>
@@ -63,7 +63,7 @@ function Inicio({ setUsuarioLogueado }) {
           </ul>
         </aside>
 
-        {/* ===== Área central ===== */}
+        {/*  Área central  */}
         <main className="contenido-principal">
           <h1 className="bienvenida">¡Te damos la bienvenida a Shopyfy! 🎉</h1>
           <PanelInicio />

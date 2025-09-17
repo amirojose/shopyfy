@@ -67,7 +67,7 @@ function Inicio({ setUsuarioLogueado }) {
 
         {/* Área central */}
         <main className="contenido-principal">
-          <h1 className="bienvenida">¡Te damos la bienvenida a Shopyfy! 🎉</h1>
+          <h1 className="bienvenida">¡Te damos la bienvenida a Shopify! 🎉</h1>
           <PanelInicio />
         </main>
       </div>

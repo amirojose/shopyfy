@@ -1,4 +1,4 @@
-import { useState } from "react"; //aca lo usamos para (abrir/cerrar menú)
+import { useState } from "react"; //en este componente lo usamos para (abrir/cerrar menú)
 import "./Barra.css"; // 
 import logo from "./assets/logo.png"; 
 

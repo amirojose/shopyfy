@@ -25,8 +25,8 @@ function Login({ setUsuarioLogueado }) {
       if (datos.success) {
         // Guardamos en localStorage primero
         localStorage.setItem("usuarioLogueado", "true");
-        setUsuarioLogueado(true); // actualizamos estado global
-        navigate("/inicio"); // redirigimos
+        setUsuarioLogueado(true); // actualizamos estado 
+        navigate("/inicio"); 
       }
     } catch (error) {
       setMensaje("⚠️ Error de conexión con el servidor");

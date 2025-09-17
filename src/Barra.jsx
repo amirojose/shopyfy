@@ -3,7 +3,7 @@ import "./Barra.css"; //
 import logo from "./assets/logo.png"; 
 
 function Barra() {
-  // el menu comienza en falso, cerrado
+  
   const [solucionesAbierto, setSolucionesAbierto] = useState(false);
 
   return (

@@ -1,6 +1,6 @@
 import React from "react";
-import "./Pedidos.css"; // archivo de estilos
-import pedidosImg from "./assets/pedidos.png"; // ruta correcta a la imagen
+import "./Pedidos.css"; 
+import pedidosImg from "./assets/pedidos.png"; 
 
 function Pedidos() {
   return (

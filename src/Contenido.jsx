@@ -1,6 +1,6 @@
 import React from "react";
 import "./Contenido.css";
-import contenidoImg from "./assets/contenido.png"; // asegúrate de que la imagen esté en src/assets
+import contenidoImg from "./assets/contenido.png"; 
 
 function Contenido() {
   return (

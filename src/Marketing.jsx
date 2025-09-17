@@ -1,5 +1,5 @@
 import React from "react";
-import "./Marketing.css"; // crea este archivo para los estilos
+import "./Marketing.css"; 
 
 function Marketing() {
   return (

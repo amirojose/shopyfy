@@ -1,6 +1,6 @@
 import React from "react";
 import "./Descuentos.css";
-import descuentosImg from "./assets/descuentos.png"; // asegúrate de que esté en src/assets
+import descuentosImg from "./assets/descuentos.png"; 
 
 function Descuentos() {
   return (

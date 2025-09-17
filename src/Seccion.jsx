@@ -5,12 +5,12 @@ import "./Seccion.css";
 function Seccion() {
   return (
     <div className="seccion">
-      {/* Icono de Shopify a la izquierda */}
+      
       <div className="icono-shopify">
         <img src={shopifyIcon} alt="Shopify" />
       </div>
 
-      {/* Contenedor de las 4 columnas */}
+      
       <div className="columnas">
         {/* Columna 1 */}
         <div className="columna">
